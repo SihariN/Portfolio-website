@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo1.png" class="logo">
+                <ul id="sidemenu">
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <br>
+                <p>Student</p>
+                <h1>Hi,I'm <span>Sihari</span><br>from Sri Lanka</h1>
+            </div>
+        </div>
+    </div>
+    <!--about-->
+    <!--<div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="pp.jpg">
+                </div>
+                <div class="col2">
+                    <h1 class="subTitle">About Me</h1>
+                    <p>
+
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-l" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>designing web/app interfaces</li>
+                            <li><span>Programming</span><br>Python, C</li>
+                            <li><span>Graphic Design</span><br>Canva, Figma</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education"> 
+                        <ul>
+                            <li><span>A/L's</span><br>Sanghamiththa College,Galle(2021-2023)</li>
+                            <li><span>B.Sc(Hons) in IT and Management(Undergraduate)</span><br>University of Moratuwa(-present)</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!--portfolio-->
+    <!--<div id="portfolio">
+        <div class="container">
+            <h1 class="subTitle">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="blog.png">
+                    <div class="layer">
+                        <h3>blog</h3>
+                        <p>Here's a blog written by me on Medium titled "HTML and CSS for beginners"</p>
+                        <a class="link" href="#">click here</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img3.webp">
+                    <div class="layer">
+                        <h3>coding</h3>
+                        <p>Here's simple coding done by using python programming</p>
+                        <a class="link" href="#">click here</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="music.avif">
+                    <div class="layer">
+                        <h3>music app</h3>
+                        <p>this is an app you could listen to music and download it free of charge</p>
+                        <a class="link" href="#">click here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!--contact page-->
+    <!--<div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact1">
+                    <h1 class="subTitle">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>  siharinuwansa@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>  0715710449</p>
+                    <div class="SMedia">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+
+                </div>
+                <div class="contact2">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name..." required>
+                        <input type="email" name="Email" placeholder="Your Email..." required>
+                        <textarea name="Message" placeholder="Type Your Message Here..." rows="5"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                        <button type="reset" class="btn">Clear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright &copy; Sihari.Made with <i class="fa-regular fa-heart"></i></p>
+        </div>
+    </div>
+ <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-l");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active");
+        }
+        event.currentTarget.classList.add("active-l");
+        document.getElementById(tabname).classList.add("active");
+    }
+</script>-->
+<!--script for sidemenu--> 
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openMenu(){
+        sidemenu.style.right = "0";
+    }
+    function closeMenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>

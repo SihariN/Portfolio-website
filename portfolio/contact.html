@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo1.png" class="logo">
+                <ul id="sidemenu">
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <br>
+                <p>Student</p>
+                <h1>Hi,I'm <span>Sihari</span><br>from Sri Lanka</h1>
+            </div>
+        </div>
+    </div>
+    <!--contact page-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact1">
+                    <h1 class="subTitle">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>  siharinuwansa@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>  0715710449</p>
+                    <div class="SMedia">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+
+                </div>
+                <div class="contact2">
+                    <form id="contact-form" onsubmit="return showSuccessMessage(event)">
+                        <input type="text" name="Name" placeholder="Your Name..." required>
+                        <input type="email" name="Email" placeholder="Your Email..." required>
+                        <textarea name="Message" placeholder="Type Your Message Here..." rows="5"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                        <button type="reset" class="btn">Clear</button>
+                        <p id="success-message" style="display:none; color: green; margin-top: 10px;">
+                            You have successfully submitted the data!
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright &copy; Sihari.Made with <i class="fa-regular fa-heart"></i></p>
+        </div>
+    </div>
+    <script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openMenu(){
+        sidemenu.style.right = "0";
+    }
+    function closeMenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+  function showSuccessMessage(event) {
+    event.preventDefault(); // Prevent actual form submission
+
+    const message = document.getElementById('success-message');
+    message.style.display = 'block';
+
+    // Hide message after 5 seconds
+    setTimeout(() => {
+      message.style.display = 'none';
+    }, 5000);
+
+    // Optionally clear the form
+    document.getElementById('contact-form').reset();
+
+    return false; // To ensure form doesn't reload page
+  }
+</script>
+    </body>
+    </html>
